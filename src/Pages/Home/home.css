@@ -1,14 +1,15 @@
 .posterImage{
     height: 600px;
   }
-  .posterImage >img{
+  .posterImage > img {
     margin:auto;
     display: block;
     width: 100%;
   }
-  .posterImage_overlay{
+  .posterImage_overlay {
     position: absolute;
-    padding: 100px;
+    padding: 5rem;
+    bottom: 0px;
     height: 70%;
     display: flex;
     flex-direction: column;
@@ -20,18 +21,18 @@
    transition: opacity .3s;
   }
   
-  .posterImage_overlay:hover{
+  .posterImage_overlay:hover {
     opacity: 1;
   }
   
-  .postImage_title{
+  .posterImage_title{
     font-weight: 900;
     font-size: 4rem;
     margin-bottom: 0.4rem;
     text-align: left;
   }
   
-  .posterImage_runtime{
+  .posteImage_runtime{
     font-size: 2rem;
     margin-bottom: 1rem;
   }

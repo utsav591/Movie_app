@@ -3,6 +3,8 @@ import "./home.css"
 import "react-responsive-carousel/lib/styles/carousel.min.css"; 
 import { Carousel } from 'react-responsive-carousel';
 import { Link } from 'react-router-dom/cjs/react-router-dom.min';
+import MovieList from '../../Componets/movieList/Movielist';
+
 
 
 function Home (){
@@ -45,7 +47,11 @@ function Home (){
                     ))
                 }
             </Carousel>
+            <div className='container p-5'>
+                <MovieList/>
+            </div>
         </div>
+        
     )
 }
 

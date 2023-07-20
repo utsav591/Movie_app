@@ -1,6 +1,7 @@
-.app{
-  color: black;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+.App {
+  background-color: black;
+  color: white;
+  font-family: sans-serif;
 }
 
 .movielogo{
