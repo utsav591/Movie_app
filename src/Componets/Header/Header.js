@@ -1,8 +1,12 @@
 import React from 'react'
 import logo from "../../Assets/mlogo.png"
 import { NavLink } from 'react-router-dom';
+import MovieList from '../movieList/Movielist';
 
 function Header(){
+
+  
+
 return(
     <div>
     <nav className="navbar navbar-expand-lg bg-body-tertiary">
@@ -14,7 +18,7 @@ return(
     <div className="collapse navbar-collapse" id="navbarSupportedContent">
       <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
         <li className="nav-item">
-          <NavLink className="nav-link active" aria-current="page" to="/movies/popular">Popular</NavLink>
+          <NavLink className="nav-link active" aria-current="page" to="/movies/popular" src={MovieList}></NavLink>
         </li>
         <li className="nav-item">
           <NavLink className="nav-link" aria-current="page" to="/movies/top_rated">Top Rated</NavLink>
@@ -23,7 +27,7 @@ return(
           <NavLink className="nav-link" aria-current="page" to="/movies/upcoming">Upcoming</NavLink>
         </li>
         <form className="d-flex" role="search">
-        <input className="form-control me-3" type="search" placeholder="Search" aria-label="Search"/>
+        <input className="form-control me-3" type="search" placeholder="Search" aria-label="Search" />
         <button className="btn btn-outline-success" type="submit">Search</button>
       </form>
       </ul>
