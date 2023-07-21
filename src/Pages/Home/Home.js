@@ -7,6 +7,7 @@ import MovieList from '../../Componets/movieList/Movielist';
 
 
 
+
 function Home (){
 
     const [popularMovie,setPopularMovie]= useState([])
@@ -16,6 +17,7 @@ function Home (){
         .then(res =>res.json())
         .then(data => setPopularMovie(data.results))
     },[])
+    
     return (
         <div className='home'>
             <Carousel 

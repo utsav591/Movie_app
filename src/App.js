@@ -2,8 +2,8 @@ import './App.css';
 import Home from './Pages/Home/Home'
 import { BrowserRouter as Router,Switch, Route } from "react-router-dom";
 import Header from './Componets/Header/Header';
-import Cards from './Componets/card/Cards'
 import MovieList from './Componets/movieList/Movielist';
+import Movies from './Pages/Movies/Movies'
 
 
 function App() {
@@ -16,12 +16,13 @@ function App() {
             <Home/>
           </Route>
           <Route path="movies/:id" element={<h1>Error Page</h1>}>
-            
+            <Movies/>
           </Route>
           <Route path="movies/:type">
+          <Home/>
            <MovieList/>
           </Route>
-          <Route path="movies/" element={<h1>Error Page</h1>}></Route>
+          <Route path="/*" element={<h1>Error Page</h1>}></Route>
           </Switch>
         </Router>
       
