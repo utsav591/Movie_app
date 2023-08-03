@@ -18,13 +18,13 @@ return(
     <div className="collapse navbar-collapse" id="navbarSupportedContent">
       <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
         <li className="nav-item">
-          <NavLink className="nav-link active" aria-current="page" to="/movies/popular" src={MovieList}></NavLink>
+          <NavLink className="nav-link" aria-current="page" to="/movies/popular" src={MovieList}><span>Popular</span></NavLink>
         </li>
         <li className="nav-item">
-          <NavLink className="nav-link" aria-current="page" to="/movies/top_rated">Top Rated</NavLink>
+          <NavLink className="nav-link" aria-current="page" to="/movies/top_rated" src={MovieList}><span>Top Rated</span></NavLink>
         </li>
         <li className="nav-item">
-          <NavLink className="nav-link" aria-current="page" to="/movies/upcoming">Upcoming</NavLink>
+          <NavLink className="nav-link" aria-current="page" to="/movies/upcoming" src={MovieList}><span>Upcoming</span></NavLink>
         </li>
         <form className="d-flex" role="search">
         <input className="form-control me-3" type="search" placeholder="Search" aria-label="Search" />

@@ -1,7 +1,6 @@
 import React, {useEffect, useState} from "react"
 import "./Movies.css"
 import { useParams } from "react-router-dom"
-import { Link } from "react-router-dom/cjs/react-router-dom.min"
 
 const Movie = () => {
     const [currentMovieDetail, setMovie] = useState()
@@ -21,7 +20,7 @@ const Movie = () => {
     return (
         <div className="movie">
             <div className="movie__intro">
-                <img  alt=""className="movie__backdrop" src={`https://image.tmdb.org/t/p/original${currentMovieDetail ? currentMovieDetail.backdrop_path : ""}`} />
+                <img alt=""className="movie__backdrop" src={`https://image.tmdb.org/t/p/original${currentMovieDetail ? currentMovieDetail.backdrop_path : ""}`} />
             </div>
             <div className="movie__detail">
                 <div className="movie__detailLeft">
@@ -61,10 +60,10 @@ const Movie = () => {
             <div className="movie__links">
                 <div className="movie__heading">Useful Links</div>
                 {
-                    currentMovieDetail && currentMovieDetail.homepage && <Link to={currentMovieDetail.homepage} target="_blank" style={{textDecoration: "none"}}><p><span className="movie__homeButton movie__Button">Homepage <i className="newTab fas fa-external-link-alt"></i></span></p></Link>
+                    currentMovieDetail && currentMovieDetail.homepage && <a href={currentMovieDetail.homepage} target="_blank" style={{textDecoration: "none"}}><p><span className="movie__homeButton movie__Button">Homepage <i className="newTab fas fa-external-link-alt"></i></span></p></a>
                 }
                 {
-                    currentMovieDetail && currentMovieDetail.imdb_id && <Link to={"https://www.imdb.com/title/" + currentMovieDetail.imdb_id} target="_blank" style={{textDecoration: "none"}}><p><span className="movie__imdbButton movie__Button">IMDb<i className="newTab fas fa-external-link-alt"></i></span></p></Link>
+                    currentMovieDetail && currentMovieDetail.imdb_id && <a href={"https://www.imdb.com/title/" + currentMovieDetail.imdb_id} target="_blank" style={{textDecoration: "none"}}><p><span className="movie__imdbButton movie__Button">IMDb<i className="newTab fas fa-external-link-alt"></i></span></p></a>
                 }
             </div>
             <div className="movie__heading">Production companies</div>
@@ -76,7 +75,7 @@ const Movie = () => {
                                 company.logo_path 
                                 && 
                                 <span className="productionCompanyImage">
-                                    <img alt="" className="movie__productionComapany" src={"https://image.tmdb.org/t/p/original" + company.logo_path} />
+                                    <img className="movie__productionComapany" src={"https://image.tmdb.org/t/p/original" + company.logo_path} />
                                     <span>{company.name}</span>
                                 </span>
                             }
